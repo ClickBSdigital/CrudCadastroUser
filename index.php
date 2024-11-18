@@ -1,4 +1,4 @@
-<?php include 'db.php'; ?>
+<?php require_once 'db.php'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,20 +18,20 @@
             <th>Ações</th>
         </tr>
         <?php
-        $sql = "SELECT * FROM contatos";
+        $sql = "SELECT * FROM usuarios";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $contatos = $stmt->fetchAll();
 
         foreach ($contatos as $contato) {
             echo "<tr>
-                    <td>{$contato['id']}</td>
+                    <td>{$contato['id_usuario']}</td>
                     <td>{$contato['nome']}</td>
                     <td>{$contato['email']}</td>
                     <td>{$contato['telefone']}</td>
                     <td>
-                        <a href='update.php?id={$contato['id']}'>Editar</a> |
-                        <a href='delete.php?id={$contato['id']}'>Excluir</a>
+                        <a href='update.php?id={$contato['id_usuario']}'>Editar</a> |
+                        <a href='delete.php?id={$contato['id_usuario']}'>Excluir</a>
                     </td>
                 </tr>";
         }
