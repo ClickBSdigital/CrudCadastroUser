@@ -1,7 +1,7 @@
-<?php include 'db.php';
+<?php require_once  'db.php';
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM contatos WHERE id = ?";
+$sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$id]);
 $contato = $stmt->fetch();
@@ -31,7 +31,7 @@ $contato = $stmt->fetch();
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
 
-        $sql = "UPDATE contatos SET nome = ?, email = ?, telefone = ? WHERE id = ?";
+        $sql = "UPDATE usuarios SET nome = ?, email = ?, telefone = ? WHERE id_usuario = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$nome, $email, $telefone, $id]);
 

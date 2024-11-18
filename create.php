@@ -24,9 +24,9 @@
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
 
-        $sql = "INSERT INTO contatos (nome, email, telefone) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO usuarios (nome, email, telefone) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$nome, $email, $telefone]);
+        $stmt->execute([$nome, $email, $telefone,]);
 
         echo "Contato adicionado com sucesso!";
     }

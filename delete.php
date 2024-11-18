@@ -1,7 +1,7 @@
-<?php include 'db.php';
+<?php require_once 'db.php';
 
 $id = $_GET['id'];
-$sql = "DELETE FROM contatos WHERE id = ?";
+$sql = "DELETE FROM usuarios WHERE id_usuario = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$id]);
 
