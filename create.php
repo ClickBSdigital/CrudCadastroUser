@@ -1,4 +1,4 @@
-<?php include 'db.php'; ?>
+<?php require_once 'db.php'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -22,7 +22,7 @@
     <a href="index.php">
         <button >Voltar</button>
     </a>
-    <b>
+    <br>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
