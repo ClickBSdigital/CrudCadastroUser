@@ -16,7 +16,13 @@
         <label>Telefone:</label>
         <input type="text" name="telefone"><br>
         <button type="submit">Salvar</button>
+        
     </form>
+    <br>
+    <a href="index.php">
+        <button >Voltar</button>
+    </a>
+    <b>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {

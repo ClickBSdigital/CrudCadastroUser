@@ -24,7 +24,11 @@ $contato = $stmt->fetch();
         <input type="text" name="telefone" value="<?= $contato['telefone'] ?>"><br>
         <button type="submit">Atualizar</button>
     </form>
-
+    <br>
+    <a href="index.php">
+        <button >Voltar</button>
+    </a>
+    <br>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = $_POST['nome'];
