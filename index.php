@@ -32,11 +32,13 @@
                     <td>{$contato['telefone']}</td>
                     <td>
                         <a href='update.php?id={$contato['id_usuario']}'>Editar</a> |
-                        <a href='delete.php?id={$contato['id_usuario']}'>Excluir</a>
+                        <a href='modal_delete.php'  >Excluir</a>
                     </td>
                 </tr>";
         }
         ?>
     </table>
+    
+
 </body>
 </html>

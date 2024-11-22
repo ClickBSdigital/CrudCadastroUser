@@ -24,7 +24,7 @@
     <a href="index.php">
         <button >Voltar</button>
     </a>
-    <br>
+    <br><br>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
