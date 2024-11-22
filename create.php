@@ -20,6 +20,7 @@
         
     </form>
     <br>
+    <div class="botao_voltar">
     <a href="index.php">
         <button >Voltar</button>
     </a>
@@ -38,5 +39,6 @@
         echo "Contato adicionado com sucesso!";
     }
     ?>
+    </div>
 </body>
 </html>

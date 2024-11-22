@@ -26,6 +26,7 @@ $contato = $stmt->fetch();
         <button type="submit">Atualizar</button>
     </form>
     <br>
+    <div class="botao_voltar">
     <a href="index.php">
         <button >Voltar</button>
     </a>
@@ -43,5 +44,6 @@ $contato = $stmt->fetch();
         echo "Contato atualizado com sucesso!";
     }
     ?>
+    </div>
 </body>
 </html>
