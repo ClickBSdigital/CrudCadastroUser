@@ -12,6 +12,7 @@ $contato = $stmt->fetch();
 <head>
     <meta charset="UTF-8">
     <title>Editar Contato</title>
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
     <h1>Editar Contato</h1>

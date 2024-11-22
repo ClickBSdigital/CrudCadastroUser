@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Adicionar Contato</title>
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
     <h1>Adicionar Contato</h1>

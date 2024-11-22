@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CRUD - Listar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Lista de Contatos</h1>
