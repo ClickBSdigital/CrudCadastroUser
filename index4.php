@@ -1,3 +1,4 @@
+
 <?php require_once 'db.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -20,13 +21,16 @@
             <th>Ações</th>
         </tr>
         <?php
-        $sql = "SELECT * FROM usuarios";
+        // Modifique a consulta para garantir que a coluna 'status' seja selecionada
+        $sql = "SELECT id_usuario, nome, email, telefone, status FROM usuarios";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $contatos = $stmt->fetchAll();
+
         foreach ($contatos as $contato) {
-            // Corrigido para usar 'status' em vez de 'statos'
-            $checked = $contato['status'] == 0 ? 'checked' : ''; // Se inativo = 0, marca como ativo
+            // Verifique se a chave 'status' existe antes de usá-la
+            $checked = isset($contato['status']) && $contato['status'] == 0 ? 'checked' : ''; // Se inativo = 0, marca como ativo
+            
             echo "<tr>
                     <td>{$contato['id_usuario']}</td>
                     <td>{$contato['nome']}</td>
@@ -79,7 +83,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc; /* Cor de fundo quando inativo */
+            background-color: #d11a0d; /* Cor de fundo quando inativo */
             transition: background-color 0.4s, border-radius 0.4s; /* Transição suave */
             border-radius: 24px; /* Bordas arredondadas */
         }

@@ -1,6 +1,6 @@
 <?php require_once  'db.php';
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 $id = $_GET['id'];
 $sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
 $stmt = $conn->prepare($sql);
