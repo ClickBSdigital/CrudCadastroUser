@@ -3,10 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
   
-=======
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
 }
 
 body {
@@ -15,10 +12,8 @@ body {
   color: #333;
   padding: 20px;
   line-height: 1.6;
-<<<<<<< HEAD
   align-items: center;
-=======
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
+
 }
 
 /* Cabeçalho */
@@ -104,7 +99,7 @@ td a:hover {
       font-size: 0.9rem;
   }
 }
-<<<<<<< HEAD
+
 
 /* Estilo para o modal */
 .modal {
@@ -146,5 +141,3 @@ td a:hover {
     text-align: left;
     margin-bottom: 20px;
 }
-=======
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5

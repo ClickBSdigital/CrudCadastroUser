@@ -24,8 +24,9 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $contatos = $stmt->fetchAll();
+
         foreach ($contatos as $contato) {
-            $checked = $contato['status'] == 0 ? 'checked' : ''; // Se inativo = 0, marca como ativo
+            $checked = $contato['status'] == 1 ? 'checked' : ''; // Se inativo = 0, marca como ativo
             echo "<tr>
                     <td>{$contato['id_usuario']}</td>
                     <td>{$contato['nome']}</td>

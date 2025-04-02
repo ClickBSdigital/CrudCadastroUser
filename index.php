@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <title>CRUD - Listar</title>
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-    
-=======
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
+
 </head>
 <body>
     <h1>Lista de Contatos</h1>
@@ -33,25 +30,21 @@
                     <td>{$contato['nome']}</td>
                     <td>{$contato['email']}</td>
                     <td>{$contato['telefone']}</td>
-                    <td>{$contato['inativo']}</td>
+                    <td>{$contato['status']}</td>
                     
                     <td>
-<<<<<<< HEAD
+
                         <a href='update.php?id={$contato['id_usuario']}'>Editar</a> | 
                         <a href='delete.php?id={$contato['id_usuario']}'>Excluir</a> |
-                         <a href='inativar.php?id={$contato['id_usuario']}'>Inativar</a>
-=======
+                        <a href='inativar.php?id={$contato['id_usuario']}'>Inativar</a>
                         <a href='update.php?id={$contato['id_usuario']}'>Editar</a> |
                         <a href='modal_delete.php'  >Excluir</a>
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
                     </td>
                 </tr>";
         }
         ?>
     </table>
-<<<<<<< HEAD
-
-    <!-- Modal de confirmação -->
+<!-- Modal de confirmação -->
     <div id="modalExcluir" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
@@ -67,9 +60,8 @@
             <button onclick="fecharModal()">Não</button>
         </div>
     </div>
-=======
-    
+   
 
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
+
 </body>
 </html>

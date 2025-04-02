@@ -1,6 +1,6 @@
 <?php require_once  'db.php';
 
-// <<<<<<< HEAD
+
 $id = $_GET['id'];
 $sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
 $stmt = $conn->prepare($sql);
@@ -46,7 +46,9 @@ $contato = $stmt->fetch();
     ?>
 </body>
 </html>
-=======
+
+<?php
+
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE' && isset($_GET['id'])){
     $id = $_GET['id'];
     // $sql = "DELETE FROM usuarios WHERE id_usuario = :id";
@@ -63,4 +65,4 @@ try{
     
 }
 }
->>>>>>> 1d80912e31ddf178d743469e64202517f41809c5
+
