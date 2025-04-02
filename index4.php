@@ -8,6 +8,51 @@
     <script src="script3.js"></script>
 </head>
 <body>
+<h1>Lista de Contatos</h1>
+<button onclick="openModal()">Adicionar Novo Contato</button>
+
+<!-- Modal de Cadastro -->
+<div id="modalCadastro" style="display:none; position:fixed; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:1000;">
+    <div style="background-color:white; margin:10% auto; padding:20px; width:400px; text-align:center; border-radius:8px;">
+        <h2>Novo Contato</h2>
+        <form id="formCadastro">
+            <input type="text" id="nome" placeholder="Nome" required><br><br>
+            <input type="email" id="email" placeholder="Email" required><br><br>
+            <input type="text" id="telefone" placeholder="Telefone" required><br><br>
+            <button type="button" onclick="cadastrarContato()">Salvar</button>
+            <button type="button" onclick="closeModal()">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("modalCadastro").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modalCadastro").style.display = "none";
+}
+
+function cadastrarContato() {
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var telefone = document.getElementById("telefone").value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "create.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("nome=" + nome + "&email=" + email + "&telefone=" + telefone);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText); // Mensagem de sucesso ou erro
+            closeModal();
+            location.reload(); // Recarrega a página para atualizar a lista
+        }
+    };
+}
+</script>
     <h1>Lista de Contatos</h1>
     <a href="create.php">Adicionar Novo Contato</a>
     <table border="1">
